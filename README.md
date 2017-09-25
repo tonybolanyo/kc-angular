@@ -1,6 +1,13 @@
 # kc-angular
 KeepCoding WebIII bootcamp angular module working classes
 
+# Install angular cli
+
+```
+$ nvm use 8.5
+$ npm install -g @angular/cli 
+```
+
 # Useful links
 - Angular: https://angular.io
 - Typescript: https://www.typescriptlang.org/
