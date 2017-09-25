@@ -10,6 +10,10 @@ $ ng new schedule
 $ ng serve
 ```
 
+# TypeScript
+
+- Anders Hejbelrg: https://es.wikipedia.org/wiki/Anders_Hejlsberg
+
 # Useful links
 - Angular: https://angular.io
 - Typescript: https://www.typescriptlang.org/
