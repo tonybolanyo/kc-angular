@@ -18,6 +18,8 @@ $ ng serve
 - Angular: https://angular.io
 - Typescript: https://www.typescriptlang.org/
 
+- Angular Material: https://material.angular.io
+
 - Nativescrtipt: https://www.nativescript.org/
 - Ionic Framework: http://ionicframework.com/
 - ... Electron: https://electron.atom.io/
