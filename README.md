@@ -6,6 +6,7 @@ KeepCoding WebIII bootcamp angular module working classes
 ```
 $ nvm use 8.5
 $ npm install -g @angular/cli 
+$ ng new schedule
 ```
 
 # Useful links
