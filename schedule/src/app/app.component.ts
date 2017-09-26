@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ContactsService } from './contacts.service';
+
 // can you see? it's like .NET a class with a decorator
 
 // @Component decorator is used here so the AppComponent
@@ -15,30 +17,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  names: string[] = [
-    'Steve Jobs',
-    'Steve Wozniak',
-    'Bill Gates',
-    'Sundar Pichai',
-    'Elon Musk',
-    'Bob Esponja'
-  ];
+  names: string[];
 
-  constructor() {
-    console.log('Constructor');
+  // to make a dependency injection of a service
+  // we must do it in the constructor of the class
+  // We annotate a param with type of service to inject
+  // and add an access modifier to make the injection
+  constructor(private _contactsService: ContactsService) {
+    console.log('Constructor: component instantiated and service injected');
   }
 
   // This hook ('OnInit') runs when component has
   // its template associated. It's the ideal point to link with data
   ngOnInit(): void {
-    console.log("I'm on OnInit hook");
+    console.log('I\'m on OnInit hook');
+    this.names = this._contactsService.getContacts();
   }
 
   deleteContact(name: string): void {
-    console.log('Yes, ' + name + ' deleted');
-    // use filter to delete the notified contact
-    // We select all contacts with name is not in the name param
-    this.names = this.names.filter((n) => n != name);
+    this._contactsService.deleteContact(name);
+    this.names = this._contactsService.getContacts();
   }
-
 }

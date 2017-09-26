@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
+import { ContactsService } from './contacts.service';
 
 // @NgModule decorator is used here so the 
 // AppModule acts like a module.
@@ -19,7 +20,9 @@ import { ContactListComponent } from './contact-list/contact-list.component';
     BrowserModule
   ],
   // on 'providers' we declare all providers to be injected
-  providers: [],
+  providers: [
+    ContactsService
+  ],
   // on 'bootstrap' we declare the root component to construct
   // the application
   bootstrap: [AppComponent]
