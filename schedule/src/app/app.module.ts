@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ContactListComponent } from './contact-list/contact-list.component';
 
 // @NgModule decorator is used here so the 
 // AppModule acts like a module.
@@ -9,7 +10,8 @@ import { AppComponent } from './app.component';
   // on 'declarations' we declare all components
   // pipes and directives used by application
   declarations: [
-    AppComponent
+    AppComponent,
+    ContactListComponent
   ],
   // on 'imports' we declare all modules which
   // our application depends on

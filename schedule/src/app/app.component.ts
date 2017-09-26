@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 // can you see? it's like .NET a class with a decorator
 
@@ -13,5 +13,18 @@ import { Component } from '@angular/core';
   // can be multiple files, can be sass
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+  title: string;
+
+  constructor() {
+    console.log('Constructor');
+  }
+
+  // This hook ('OnInit') runs when component has
+  // its template associated. It's the ideal point to link with data
+  ngOnInit(): void {
+    console.log("I'm on OnInit hook");
+  }
+
 }
