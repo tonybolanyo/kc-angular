@@ -3,6 +3,12 @@
 </header>
 
 <!--
-  To evaluate an attribute value before its assign, we must write it inside brackets
+  To evaluate an attribute value before its assign, 
+  we must write it inside brackets.
+  If we want grab the data from an event 
+  we need to use the $event reserved word
 -->
-<app-contact-list [contacts]="names"></app-contact-list>
+<app-contact-list 
+  [contacts]="names" 
+  (deleteButtonClicked)="deleteContact($event)">
+</app-contact-list>

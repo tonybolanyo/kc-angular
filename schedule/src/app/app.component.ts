@@ -34,4 +34,11 @@ export class AppComponent implements OnInit {
     console.log("I'm on OnInit hook");
   }
 
+  deleteContact(name: string): void {
+    console.log('Yes, ' + name + ' deleted');
+    // use filter to delete the notified contact
+    // We select all contacts with name is not in the name param
+    this.names = this.names.filter((n) => n != name);
+  }
+
 }
