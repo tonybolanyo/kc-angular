@@ -22,6 +22,6 @@ export class ContactsService {
     console.log('Yes, ' + name + ' deleted');
     // use filter to delete the notified contact
     // We select all contacts with name is not in the name param
-    this._names = this._names.filter((n) => n != name);
+    this._names = this._names.filter((n) => n !== name);
   }
 }
