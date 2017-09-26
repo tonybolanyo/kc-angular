@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ContactsService } from './contacts.service';
+import { Contact } from './contacto';
 
 // can you see? it's like .NET a class with a decorator
 
@@ -17,7 +18,7 @@ import { ContactsService } from './contacts.service';
 })
 export class AppComponent implements OnInit {
 
-  names: string[];
+  names: Contact[];
 
   // to make a dependency injection of a service
   // we must do it in the constructor of the class
@@ -34,7 +35,7 @@ export class AppComponent implements OnInit {
     this.names = this._contactsService.getContacts();
   }
 
-  deleteContact(name: string): void {
+  deleteContact(name: Contact): void {
     this._contactsService.deleteContact(name);
     this.names = this._contactsService.getContacts();
   }

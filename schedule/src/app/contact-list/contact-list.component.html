@@ -4,7 +4,7 @@
         and for each element adds 
     -->
     <li *ngFor="let contact of contacts">
-        {{ contact }}
+        {{ contact.name }} {{ contact.lastName }}
         <!-- Events subscription works writing event name between parenthesis -->
         <button (click)="notifyContactDelete(contact)">delete</button>
     </li>
