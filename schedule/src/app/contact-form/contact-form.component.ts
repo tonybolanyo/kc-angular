@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { Contact } from '../contacto';
 
 @Component({
   selector: 'app-contact-form',
@@ -9,6 +11,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContactFormComponent {
 
   formContact: FormGroup;
+  @Output() saveButtonClicked = new EventEmitter<Contact>();
 
   constructor(private _formBuilder: FormBuilder) {
     this.createForm();
@@ -21,7 +24,9 @@ export class ContactFormComponent {
     });
   }
 
-  saveContact() {
-    console.log(this.formContact.value);
+  notifyContactSave() {
+    const contact: Contact = this.formContact.value as Contact;
+    this.saveButtonClicked.emit(contact);
+    console.log("emitted");
   }
 }

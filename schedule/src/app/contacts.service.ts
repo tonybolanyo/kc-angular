@@ -20,6 +20,11 @@ export class ContactsService {
     return this._names;
   }
 
+  addContact(contact: Contact): void {
+    this._names.push(contact);
+    console.log(contact, this._names);
+  }
+
   deleteContact(name: Contact): void {
     console.log('Yes, ' + name + ' deleted');
     // use filter to delete the notified contact

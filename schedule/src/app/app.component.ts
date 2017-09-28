@@ -39,4 +39,9 @@ export class AppComponent implements OnInit {
     this._contactsService.deleteContact(name);
     this.names = this._contactsService.getContacts();
   }
+  
+  saveContact(contact: Contact): void {
+    this._contactsService.addContact(contact);
+    this.names = this._contactsService.getContacts();
+  }
 }
