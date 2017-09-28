@@ -2,7 +2,8 @@
   <h1>re/schedule</h1>
 </header>
 
-<app-contact-form></app-contact-form>
+<app-contact-form
+  (saveButtonClicked)="saveContact($event)"></app-contact-form>
 
 <!--
   To evaluate an attribute value before its assign, 
