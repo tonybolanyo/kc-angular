@@ -1,0 +1,19 @@
+<form [formGroup]="formContact" (ngSubmit)="saveContact()">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" name="name" formControlName="name">
+    <span *ngIf="formContact.get('name').touched && formContact.get('name').invalid">
+      Name is required
+    </span>
+  </div>
+  <div>
+    <label for="lastName">Last name:</label>
+    <input type="text" name="lastName" formControlName="lastName">
+    <span *ngIf="formContact.get('lastName').touched && formContact.get('lastName').invalid">
+        Last name is required
+      </span>
+    </div>
+  <div>
+    <button type="submit" [disabled]="formContact.invalid">Save contact</button>
+  </div>
+</form>
