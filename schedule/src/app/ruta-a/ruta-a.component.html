@@ -1,10 +1,18 @@
-<!--
-  To evaluate an attribute value before its assign, 
-  we must write it inside brackets.
-  If we want grab the data from an event 
-  we need to use the $event reserved word
--->
-<app-contact-list 
-[contacts]="names" 
-(deleteButtonClicked)="deleteContact($event)">
-</app-contact-list>
+<div class="row">
+  <div class="six columns">
+    <!--
+      To evaluate an attribute value before its assign, 
+      we must write it inside brackets.
+      If we want grab the data from an event 
+      we need to use the $event reserved word
+    -->
+    <app-contact-list 
+      [contacts]="contacts" 
+      (selectedContact)="showDetails($event)"
+      (deleteButtonClicked)="deleteContact($event)">
+      </app-contact-list>
+  </div>
+  <div class="six columns">
+      <app-contact-details
+      [contact]="selectedContact"></app-contact-details>  </div>
+</div>

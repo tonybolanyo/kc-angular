@@ -9,6 +9,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { RutaAComponent } from './ruta-a/ruta-a.component';
 import { RutaBComponent } from './ruta-b/ruta-b.component';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
 // @NgModule decorator is used here so the 
 // AppModule acts like a module.
@@ -20,7 +21,8 @@ import { RutaBComponent } from './ruta-b/ruta-b.component';
     ContactListComponent,
     ContactFormComponent,
     RutaAComponent,
-    RutaBComponent
+    RutaBComponent,
+    ContactDetailsComponent
   ],
   // on 'imports' we declare all modules which
   // our application depends on

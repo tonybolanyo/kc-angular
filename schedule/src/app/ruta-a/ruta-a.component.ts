@@ -10,7 +10,8 @@ import { ContactsService } from '../contacts.service';
 })
 export class RutaAComponent implements OnInit {
 
-  names: Contact[];
+  contacts: Contact[];
+  selectedContact: Contact;
    
   // to make a dependency injection of a service
   // we must do it in the constructor of the class
@@ -22,13 +23,16 @@ export class RutaAComponent implements OnInit {
   // This hook ('OnInit') runs when component has
   // its template associated. It's the ideal point to link with data
   ngOnInit(): void {
-    this.names = this._contactsService.getContacts();
+    this.contacts = this._contactsService.getContacts();
   }
 
-  deleteContact(name: Contact): void {
-    this._contactsService.deleteContact(name);
-    this.names = this._contactsService.getContacts();
+  deleteContact(contact: Contact): void {
+    this._contactsService.deleteContact(contact);
+    this.contacts = this._contactsService.getContacts();
   }
   
-
+  showDetails(contact: Contact): void {
+    // We need link the contact with the details component
+    this.selectedContact = contact;
+  }
 }

@@ -4,7 +4,7 @@
             NgFor directive iterates along a collection
             and for each element adds 
         -->
-        <li *ngFor="let contact of contacts">
+        <li *ngFor="let contact of contacts" (click)="notifySelectedContact(contact)">
             {{ contact.name }} {{ contact.lastName }}
             <!-- Events subscription works writing event name between parenthesis -->
             <button (click)="notifyContactDelete(contact)">delete</button>

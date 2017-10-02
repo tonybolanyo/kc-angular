@@ -8,12 +8,12 @@ import { Contact } from './contacto';
 export class ContactsService {
 
   private _names: Contact[] = [
-    new Contact(1, 'Steve', 'Jobs'),
-    new Contact(2, 'Steve', 'Wozniak'),
+    new Contact(1, 'Steve', 'Jobs', '555 666 777', 'steve.jobs@apple.com'),
+    new Contact(2, 'Steve', 'Wozniak', '765 890 345', 'steve.wozniak@apple.com'),
     new Contact(3, 'Bill', 'Gates'),
-    new Contact(4, 'Sundar', 'Pichai'),
-    new Contact(5, 'Elon', 'Musk'),
-    new Contact(6, 'Bob', 'Esponja')
+    new Contact(4, 'Sundar', 'Pichai', null, 'sungar.pichai@google.com'),
+    new Contact(5, 'Elon', 'Musk', '345 213 456'),
+    new Contact(6, 'Bob', 'Esponja', '123 123 123', 'bob.esponja@dibus.es')
   ];
 
   getContacts(): Contact[] {

@@ -17,6 +17,8 @@ export class ContactListComponent {
   // can subscribe. This event must be an EventEmitter of desired type
   @Output() deleteButtonClicked = new EventEmitter<Contact>();
 
+  @Output() selectedContact = new EventEmitter<Contact>();
+
   notifyContactDelete(contact: Contact): void {
     console.log('Parent, can you delete ' + contact + ', please?');
     // We notify event data to parent component (subscriber) using
@@ -24,4 +26,7 @@ export class ContactListComponent {
     this.deleteButtonClicked.emit(contact);
   }
 
+  notifySelectedContact(contact: Contact): void {
+    this.selectedContact.emit(contact);
+  }
 }
