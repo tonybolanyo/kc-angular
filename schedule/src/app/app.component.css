@@ -1,0 +1,22 @@
+nav {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    border-bottom: solid 1px #1eaedb;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    border: solid 1px #1eaedb;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.nav-active {
+    border-bottom: solid 1px white;
+}
