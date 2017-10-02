@@ -5,7 +5,6 @@ import { Contact } from '../contacto';
 import { ContactsService } from '../contacts.service';
 
 @Component({
-  selector: 'app-ruta-b',
   templateUrl: './ruta-b.component.html',
   styleUrls: ['./ruta-b.component.css']
 })
