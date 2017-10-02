@@ -2,19 +2,17 @@
   <h1>re/schedule</h1>
 </header>
 
+<!--
+  navbar, with routerLink directive we should put
+  the path where we want to navigate. This route is defined
+  on routing module
+-->
+<nav>
+  <ul>
+    <li><a routerLink="/contact-list">Contacts</a></li>
+    <li><a routerLink="/new-contact">New contact</a></li>
+  </ul>
+</nav>
+
 <!-- dynamic zone -->
 <router-outlet></router-outlet>
-
-<app-contact-form
-  (saveButtonClicked)="saveContact($event)"></app-contact-form>
-
-<!--
-  To evaluate an attribute value before its assign, 
-  we must write it inside brackets.
-  If we want grab the data from an event 
-  we need to use the $event reserved word
--->
-<app-contact-list 
-  [contacts]="names" 
-  (deleteButtonClicked)="deleteContact($event)">
-</app-contact-list>
