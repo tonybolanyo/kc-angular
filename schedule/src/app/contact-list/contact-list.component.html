@@ -7,7 +7,9 @@
         <li *ngFor="let contact of contacts" (click)="notifySelectedContact(contact)">
             {{ contact.name }} {{ contact.lastName }}
             <!-- Events subscription works writing event name between parenthesis -->
+            <!--
             <button (click)="notifyContactDelete(contact)">delete</button>
+            -->
         </li>
     </ul>
 </div>

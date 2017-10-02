@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Observable } from 'rxjs/Observable';
+
 import { Contact } from '../contacto';
 import { ContactsService } from '../contacts.service';
+
 
 
 @Component({
@@ -10,7 +13,7 @@ import { ContactsService } from '../contacts.service';
 })
 export class RutaAComponent implements OnInit {
 
-  contacts: Contact[];
+  contacts$: Observable<Contact[]>;
   selectedContact: Contact;
    
   // to make a dependency injection of a service
@@ -23,12 +26,19 @@ export class RutaAComponent implements OnInit {
   // This hook ('OnInit') runs when component has
   // its template associated. It's the ideal point to link with data
   ngOnInit(): void {
-    this.contacts = this._contactsService.getContacts();
+    // Opción 1: podemos suscribirnos manualmente al observable del servicio contacto
+    // this._contactsService.getContacts().subscribe((contacts: Contact[]) => {
+    //   this.contacts = contacts;
+    // });
+
+    // Opción 2: o podemos suscribirnos automáticamente al observable
+    // OJO: necesitamos el pipe 'async' en la plantilla html
+    this.contacts$ = this._contactsService.getContacts();
   }
 
   deleteContact(contact: Contact): void {
     this._contactsService.deleteContact(contact);
-    this.contacts = this._contactsService.getContacts();
+    //this.contacts = this._contactsService.getContacts();
   }
   
   showDetails(contact: Contact): void {
