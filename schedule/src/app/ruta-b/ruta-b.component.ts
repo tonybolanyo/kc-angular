@@ -15,8 +15,14 @@ export class RutaBComponent {
     private _router: Router) { }
 
   saveContact(contact: Contact): void {
-    this._contactsService.addContact(contact);
-    this._router.navigate(['/contact-list']);
+    this._contactsService
+      .addContact(contact)
+      .subscribe(() => {
+        // en realidad recibimos un contacto,
+        // pero como no vamos a hacer nada con el
+        // simplemente lo ignoramos
+        this._router.navigate(['/contact-list']);
+      });
   }
 
 }

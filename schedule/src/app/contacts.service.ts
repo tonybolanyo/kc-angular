@@ -18,7 +18,7 @@ export class ContactsService {
   }
 
   addContact(contact: Contact): Observable<Contact> {
-    return this._httpClient.post<Contact>('http://localhost:3004', contact);
+    return this._httpClient.post<Contact>('http://localhost:3004/contacts', contact);
   }
 
   deleteContact(contact: Contact): Observable<Contact> {

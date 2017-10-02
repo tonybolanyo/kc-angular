@@ -1,5 +1,6 @@
 {
-  "contacts": [{
+  "contacts": [
+    {
       "id": 1,
       "name": "Steve",
       "lastName": "Jobs",
@@ -12,28 +13,36 @@
       "lastName": "Wozniak",
       "mobile": "765 890 345",
       "email": "steve.wozniak@apple.com"
-    }, {
+    },
+    {
       "id": 3,
       "name": "Bill",
       "lastName": "Gates"
-    }, {
-
+    },
+    {
       "id": 4,
       "name": "Sundar",
       "lastName": "Pichai",
       "mobile": null,
       "email": "sundar.pichai@google.com"
-    }, {
+    },
+    {
       "id": 5,
       "name": "Elon",
       "lastName": "Musk",
       "mobile": "345 213 456"
-    }, {
+    },
+    {
       "id": 6,
       "name": "Bob",
       "lastName": "Esponja",
       "mobile": "123 123 123",
       "email": "Bob.esponja@dibus.es"
+    },
+    {
+      "name": "Patricio",
+      "lastName": "Estrella",
+      "id": 7
     }
   ]
 }
