@@ -12,6 +12,7 @@ import { RutaAComponent } from './ruta-a/ruta-a.component';
 import { RutaBComponent } from './ruta-b/ruta-b.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 import { ContactDataPipe } from './contact-data.pipe';
+import { ContactsSortPipe } from './contacts-sort.pipe';
 
 // @NgModule decorator is used here so the 
 // AppModule acts like a module.
@@ -25,7 +26,8 @@ import { ContactDataPipe } from './contact-data.pipe';
     RutaAComponent,
     RutaBComponent,
     ContactDetailsComponent,
-    ContactDataPipe
+    ContactDataPipe,
+    ContactsSortPipe
   ],
   // on 'imports' we declare all modules which
   // our application depends on

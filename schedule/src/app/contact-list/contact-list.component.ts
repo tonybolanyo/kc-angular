@@ -9,6 +9,8 @@ import { Contact } from '../contacto';
 })
 export class ContactListComponent {
 
+  order: string = 'asc';
+
   // @Input decorator exposes an attribute so a parent component
   // can link data to this child component
   @Input() contacts: Contact[];
@@ -28,5 +30,9 @@ export class ContactListComponent {
 
   notifySelectedContact(contact: Contact): void {
     this.selectedContact.emit(contact);
+  }
+
+  toggleOrder(): void {
+    this.order = this.order === 'asc' ? 'desc' : 'asc';
   }
 }

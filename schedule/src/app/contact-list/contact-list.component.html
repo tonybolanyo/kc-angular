@@ -1,10 +1,16 @@
 <div class="row">
+    <button (click)="toggleOrder()">
+        <i class="fa" aria-hidden="true"
+        [ngClass]="{
+            'fa-sort-alpha-asc': order === 'desc',
+            'fa-sort-alpha-desc': order === 'asc' }"></i>
+    </button>
     <ul>
         <!--
             NgFor directive iterates along a collection
             and for each element adds 
         -->
-        <li *ngFor="let contact of contacts" (click)="notifySelectedContact(contact)">
+        <li *ngFor="let contact of (contacts | contactsSort:order)" (click)="notifySelectedContact(contact)">
             {{ contact.name }} {{ contact.lastName }}
             <!-- Events subscription works writing event name between parenthesis -->
             <!--
