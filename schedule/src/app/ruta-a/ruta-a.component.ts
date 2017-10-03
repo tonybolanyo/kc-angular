@@ -45,4 +45,8 @@ export class RutaAComponent implements OnInit {
     // We need link the contact with the details component
     this.selectedContact = contact;
   }
+
+  showProfile(path: string): void {
+    window.open(path, '_blank');
+  }
 }

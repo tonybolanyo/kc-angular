@@ -1,12 +1,11 @@
-export class Contact {
+export interface Contact {
 
-    constructor(
-        public id: number,
-        public name: string,
-        public lastName: string,
-        public mobile?: string,
-        public email?: string,
-        public facebook?: string,
-        public twitter?: string
-    ) { }
+    id: number;
+    name: string;
+    lastName: string;
+    mobile?: string;
+    email?: string;
+    facebook?: string;
+    twitter?: string;
+
 }

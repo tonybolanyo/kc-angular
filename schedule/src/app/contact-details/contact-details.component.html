@@ -1,8 +1,17 @@
 <div *ngIf="contact">
+  <!-- nombe del cotntacto -->
   <h4>{{ contact.name }} {{ contact.lastName }}</h4>
+  
+  <!-- redes sociales -->
   <hr>
-  <button>Facebook</button>
-  <button>Twitter</button>
+  <button (click)="notifyFacebookClicked()" *ngIf="this.contact.facebook">
+    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+  </button>
+  <button (click)="notifyTwitterClicked()" *ngIf="this.contact.twitter">
+    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+  </button>
+
+  <!-- datos de contacto -->
   <hr>
   <div>
     {{ contact.email }} | {{ contact.mobile }}

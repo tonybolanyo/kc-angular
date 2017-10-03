@@ -12,12 +12,16 @@
       "name": "Steve",
       "lastName": "Wozniak",
       "mobile": "765 890 345",
-      "email": "steve.wozniak@apple.com"
+      "email": "steve.wozniak@apple.com",
+      "twitter": "stevewoz",
+      "facebook": "stevewoz"
     },
     {
       "id": 3,
       "name": "Bill",
-      "lastName": "Gates"
+      "lastName": "Gates",
+      "twitter": "BillGates",
+      "facebook": "BillGates"
     },
     {
       "id": 4,
@@ -30,19 +34,25 @@
       "id": 5,
       "name": "Elon",
       "lastName": "Musk",
-      "mobile": "345 213 456"
+      "mobile": "345 213 456",
+      "twitter": "@elonmusk",
+      "facebook": "Elon-Musk"
     },
     {
       "id": 6,
-      "name": "Bob",
-      "lastName": "Esponja",
-      "mobile": "123 123 123",
-      "email": "Bob.esponja@dibus.es"
+      "name": "Tim",
+      "lastName": "Cook",
+      "twitter": "@tim_cook"
+    },{
+      "id": 7,
+      "name": "Satya",
+      "lastName": "Nadella",
+      "twitter": "satianadella"
     },
     {
       "name": "Patricio",
       "lastName": "Estrella",
-      "id": 7
+      "id": 8
     }
   ]
 }

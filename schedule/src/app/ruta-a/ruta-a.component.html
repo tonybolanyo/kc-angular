@@ -14,5 +14,7 @@
   </div>
   <div class="six columns">
       <app-contact-details
-      [contact]="selectedContact"></app-contact-details>  </div>
+      [contact]="selectedContact"
+      (facebookButtonClicked)="showProfile($event)"
+      (twitterButtonClicked)="showProfile($event)"></app-contact-details>  </div>
 </div>
